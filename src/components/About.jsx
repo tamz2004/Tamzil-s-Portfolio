@@ -14,8 +14,9 @@ const About = () => {
           className="mb-16 md:mb-24 flex flex-col items-center md:items-start"
         >
           <div className="flex items-center gap-4 mb-4">
-            <h2 className="text-3xl md:text-5xl font-space font-bold">About Me</h2>
-            <div className="hidden md:block w-32 h-[1px] bg-white/20 ml-4"></div>
+            <span className="font-mono text-sm text-accent-blue">02 /</span>
+            <h2 className="text-4xl md:text-6xl font-space font-black">About</h2>
+            <div className="hidden md:block flex-1 h-[2px] bg-slate-900/10 ml-4"></div>
           </div>
         </motion.div>
 
@@ -26,15 +27,15 @@ const About = () => {
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <p className="text-white/70 text-lg leading-relaxed mb-8">
+            <p className="text-slate-600 text-lg leading-relaxed mb-8">
               {resumeData.about.text}
             </p>
             
             <div className="grid grid-cols-3 gap-4">
               {resumeData.about.stats.map((stat, index) => (
-                <div key={index} className="glass-panel p-4 text-center border-t-2 border-t-accent-blue">
-                  <div className="text-2xl md:text-3xl font-space font-bold text-white mb-2">{stat.value}</div>
-                  <div className="text-xs text-white/50 uppercase tracking-wider">{stat.label}</div>
+                <div key={index} className="glass-panel hover-lift p-4 text-center border-t-2 border-t-accent-blue">
+                  <div className="text-2xl md:text-3xl font-space font-bold text-slate-900 mb-2">{stat.value}</div>
+                  <div className="text-xs text-slate-500 uppercase tracking-wider">{stat.label}</div>
                 </div>
               ))}
             </div>
@@ -57,7 +58,7 @@ const About = () => {
             </div>
             {/* Decorative elements */}
             <div className="absolute -bottom-6 -right-6 w-24 h-24 border-2 border-accent-blue rounded-full border-dashed animate-[spin_10s_linear_infinite]"></div>
-            <div className="absolute -top-6 -left-6 w-12 h-12 bg-accent-violet/50 rounded-full blur-xl"></div>
+            <div className="absolute -top-6 -left-6 w-12 h-12 bg-accent-blue/20 rounded-full blur-xl"></div>
           </motion.div>
         </div>
       </div>

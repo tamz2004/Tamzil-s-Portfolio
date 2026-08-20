@@ -27,7 +27,7 @@ function App() {
         }}
       ></div>
 
-      <div className="relative bg-dark min-h-screen text-white">
+      <div className="relative bg-dark min-h-screen text-slate-900">
         <Navbar />
         <main>
           <Hero />

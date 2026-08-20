@@ -14,8 +14,9 @@ const Projects = () => {
           className="flex flex-col items-center md:items-start mb-16"
         >
           <div className="flex items-center gap-4 mb-4">
-            <h2 className="text-3xl md:text-5xl font-space font-bold">Projects</h2>
-            <div className="hidden md:block w-32 h-[1px] bg-white/20 ml-4"></div>
+            <span className="font-mono text-sm text-accent-blue">05 /</span>
+            <h2 className="text-4xl md:text-6xl font-space font-black">Projects</h2>
+            <div className="hidden md:block flex-1 h-[2px] bg-slate-900/10 ml-4"></div>
           </div>
         </motion.div>
 
@@ -28,7 +29,7 @@ const Projects = () => {
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
             >
-              <ProjectCard project={project} />
+              <ProjectCard project={project} index={index} />
             </motion.div>
           ))}
         </div>

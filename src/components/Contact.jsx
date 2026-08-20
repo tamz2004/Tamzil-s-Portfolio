@@ -36,10 +36,11 @@ const Contact = () => {
           className="flex flex-col items-center md:items-start mb-16"
         >
           <div className="flex items-center gap-4 mb-4">
-            <h2 className="text-3xl md:text-5xl font-space font-bold">Contact</h2>
-            <div className="hidden md:block w-32 h-[1px] bg-white/20 ml-4"></div>
+            <span className="font-mono text-sm text-accent-blue">06 /</span>
+            <h2 className="text-4xl md:text-6xl font-space font-black">Contact</h2>
+            <div className="hidden md:block flex-1 h-[2px] bg-slate-900/10 ml-4"></div>
           </div>
-          <p className="text-white/60 max-w-2xl text-lg">Let's Build Something Great.</p>
+          <p className="text-slate-600 max-w-2xl text-lg">Let's Build Something Great.</p>
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
@@ -51,13 +52,13 @@ const Contact = () => {
           >
             <h3 className="text-2xl font-space font-bold mb-8">Get In Touch</h3>
             <div className="flex flex-col gap-6">
-              <a href={`mailto:${resumeData.contact.email}`} className="flex items-center gap-4 text-white/70 hover:text-accent-blue transition-colors group">
+              <a href={`mailto:${resumeData.contact.email}`} className="flex items-center gap-4 text-slate-600 hover:text-accent-blue transition-colors group">
                 <div className="w-12 h-12 rounded-full glass-panel flex items-center justify-center group-hover:scale-110 transition-transform">
                   <HiOutlineMail className="text-xl" />
                 </div>
                 <span className="font-space text-lg">{resumeData.contact.email}</span>
               </a>
-              <a href={`tel:${resumeData.contact.phone}`} className="flex items-center gap-4 text-white/70 hover:text-accent-violet transition-colors group">
+              <a href={`tel:${resumeData.contact.phone}`} className="flex items-center gap-4 text-slate-600 hover:text-accent-blue transition-colors group">
                 <div className="w-12 h-12 rounded-full glass-panel flex items-center justify-center group-hover:scale-110 transition-transform">
                   <HiOutlinePhone className="text-xl" />
                 </div>
@@ -66,12 +67,12 @@ const Contact = () => {
             </div>
 
             <div className="mt-12">
-              <h4 className="text-sm uppercase tracking-widest text-white/40 mb-6 font-space">Social Profiles</h4>
+              <h4 className="text-sm uppercase tracking-widest text-slate-400 mb-6 font-space">Social Profiles</h4>
               <div className="flex gap-4">
-                <a href={resumeData.contact.github} target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full glass-panel flex items-center justify-center text-white/70 hover:text-white hover:bg-accent-blue hover:scale-110 transition-all">
+                <a href={resumeData.contact.github} target="_blank" rel="noopener noreferrer" data-cursor-magnetic className="w-12 h-12 rounded-full glass-panel flex items-center justify-center text-slate-600 hover:text-white hover:bg-accent-blue hover:scale-110 transition-all">
                   <FaGithub className="text-xl" />
                 </a>
-                <a href={resumeData.contact.linkedin} target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full glass-panel flex items-center justify-center text-white/70 hover:text-white hover:bg-accent-blue hover:scale-110 transition-all">
+                <a href={resumeData.contact.linkedin} target="_blank" rel="noopener noreferrer" data-cursor-magnetic className="w-12 h-12 rounded-full glass-panel flex items-center justify-center text-slate-600 hover:text-white hover:bg-accent-blue hover:scale-110 transition-all">
                   <FaLinkedin className="text-xl" />
                 </a>
               </div>
@@ -93,10 +94,10 @@ const Contact = () => {
                   value={formState.name}
                   onChange={handleChange}
                   required
-                  className="w-full bg-transparent border-b border-white/20 px-0 py-3 text-white focus:outline-none focus:border-accent-blue peer placeholder-transparent transition-colors"
+                  className="w-full bg-transparent border-b border-slate-300 px-0 py-3 text-slate-900 focus:outline-none focus:border-accent-blue peer placeholder-transparent transition-colors"
                   placeholder="Name"
                 />
-                <label htmlFor="name" className="absolute left-0 top-3 text-white/40 text-sm font-space transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-3 peer-focus:-top-4 peer-focus:text-xs peer-focus:text-accent-blue peer-[&:not(:placeholder-shown)]:-top-4 peer-[&:not(:placeholder-shown)]:text-xs">
+                <label htmlFor="name" className="absolute left-0 top-3 text-slate-400 text-sm font-space transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-3 peer-focus:-top-4 peer-focus:text-xs peer-focus:text-accent-blue peer-[&:not(:placeholder-shown)]:-top-4 peer-[&:not(:placeholder-shown)]:text-xs">
                   Your Name
                 </label>
               </div>
@@ -109,10 +110,10 @@ const Contact = () => {
                   value={formState.email}
                   onChange={handleChange}
                   required
-                  className="w-full bg-transparent border-b border-white/20 px-0 py-3 text-white focus:outline-none focus:border-accent-blue peer placeholder-transparent transition-colors"
+                  className="w-full bg-transparent border-b border-slate-300 px-0 py-3 text-slate-900 focus:outline-none focus:border-accent-blue peer placeholder-transparent transition-colors"
                   placeholder="Email"
                 />
-                <label htmlFor="email" className="absolute left-0 top-3 text-white/40 text-sm font-space transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-3 peer-focus:-top-4 peer-focus:text-xs peer-focus:text-accent-blue peer-[&:not(:placeholder-shown)]:-top-4 peer-[&:not(:placeholder-shown)]:text-xs">
+                <label htmlFor="email" className="absolute left-0 top-3 text-slate-400 text-sm font-space transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-3 peer-focus:-top-4 peer-focus:text-xs peer-focus:text-accent-blue peer-[&:not(:placeholder-shown)]:-top-4 peer-[&:not(:placeholder-shown)]:text-xs">
                   Your Email
                 </label>
               </div>
@@ -125,10 +126,10 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   rows="4"
-                  className="w-full bg-transparent border-b border-white/20 px-0 py-3 text-white focus:outline-none focus:border-accent-blue peer placeholder-transparent resize-none transition-colors"
+                  className="w-full bg-transparent border-b border-slate-300 px-0 py-3 text-slate-900 focus:outline-none focus:border-accent-blue peer placeholder-transparent resize-none transition-colors"
                   placeholder="Message"
                 ></textarea>
-                <label htmlFor="message" className="absolute left-0 top-3 text-white/40 text-sm font-space transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-3 peer-focus:-top-4 peer-focus:text-xs peer-focus:text-accent-blue peer-[&:not(:placeholder-shown)]:-top-4 peer-[&:not(:placeholder-shown)]:text-xs">
+                <label htmlFor="message" className="absolute left-0 top-3 text-slate-400 text-sm font-space transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-3 peer-focus:-top-4 peer-focus:text-xs peer-focus:text-accent-blue peer-[&:not(:placeholder-shown)]:-top-4 peer-[&:not(:placeholder-shown)]:text-xs">
                   Your Message
                 </label>
               </div>
@@ -136,15 +137,16 @@ const Contact = () => {
               <button
                 type="submit"
                 disabled={isSubmitting || isSuccess}
-                className="mt-6 px-8 py-4 rounded-full bg-white/5 border border-white/20 text-white font-bold tracking-wider hover:bg-accent-blue hover:border-accent-blue transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center min-w-[160px]"
+                className="btn-flat mt-6 px-8 py-4 bg-transparent text-slate-900 font-bold tracking-wider hover:bg-accent-blue hover:text-white transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center min-w-[160px]"
+                data-cursor-magnetic
               >
                 {isSubmitting ? (
-                  <div className="w-6 h-6 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                  <div className="w-6 h-6 border-2 border-slate-300 border-t-accent-blue rounded-full animate-spin"></div>
                 ) : isSuccess ? (
                   <motion.div
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
-                    className="flex items-center gap-2 text-green-400"
+                    className="flex items-center gap-2 text-green-600"
                   >
                     <HiCheck className="text-xl" /> Sent!
                   </motion.div>

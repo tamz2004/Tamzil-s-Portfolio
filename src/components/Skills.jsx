@@ -19,22 +19,22 @@ const skillIcons = {
   "CSS": <FaCss3Alt className="text-[#1572b6]" />,
   "Tailwind CSS": <SiTailwindcss className="text-[#38b2ac]" />,
   "Node.js": <FaNodeJs className="text-[#339933]" />,
-  "Express.js": <SiExpress className="text-white" />,
+  "Express.js": <SiExpress className="text-slate-900" />,
   "MongoDB": <SiMongodb className="text-[#47a248]" />,
   "MySQL": <SiMysql className="text-[#4479a1]" />,
   "JWT": <SiJsonwebtokens className="text-[#000000] bg-white rounded-full p-1" />,
   "REST APIs": <TbApi className="text-accent-blue" />,
   "Git": <FaGitAlt className="text-[#f05032]" />,
-  "GitHub": <FaGithub className="text-white" />,
+  "GitHub": <FaGithub className="text-slate-900" />,
   "Postman": <SiPostman className="text-[#ff6c37]" />,
   "TensorFlow.js": <SiTensorflow className="text-[#ff6f00]" />
 };
 
 const categoryIcons = {
   "Backend & APIs": <FaServer className="text-accent-blue" />,
-  "AI / ML Exposure": <FaBrain className="text-accent-violet" />,
+  "AI / ML Exposure": <FaBrain className="text-accent-blue" />,
   "Frontend": <FaLaptopCode className="text-accent-blue" />,
-  "Databases": <FaDatabase className="text-accent-violet" />,
+  "Databases": <FaDatabase className="text-accent-blue" />,
   "Tools & Practices": <FaTools className="text-accent-blue" />
 };
 
@@ -50,8 +50,9 @@ const Skills = () => {
           className="flex flex-col items-center md:items-start"
         >
           <div className="flex items-center gap-4 mb-4">
-            <h2 className="text-3xl md:text-5xl font-space font-bold">Skills</h2>
-            <div className="hidden md:block w-32 h-[1px] bg-white/20 ml-4"></div>
+            <span className="font-mono text-sm text-accent-blue">03 /</span>
+            <h2 className="text-4xl md:text-6xl font-space font-black">Skills</h2>
+            <div className="hidden md:block flex-1 h-[2px] bg-slate-900/10 ml-4"></div>
           </div>
         </motion.div>
       </div>
@@ -63,7 +64,7 @@ const Skills = () => {
           {[...resumeData.skills.marqueeRow1, ...resumeData.skills.marqueeRow1].map((skill, index) => (
             <div
               key={index}
-              className="flex items-center gap-3 justify-center px-8 py-4 mx-4 glass-panel whitespace-nowrap text-xl font-space font-medium text-white/80 hover:text-accent-blue hover:-translate-y-2 hover:shadow-[0_0_20px_rgba(59,130,246,0.4)] transition-all duration-300 border-white/5 group"
+              className="flex items-center gap-3 justify-center px-8 py-4 mx-4 glass-panel whitespace-nowrap text-xl font-space font-bold text-slate-700 hover:text-accent-blue hover:-translate-y-2 hover:shadow-[6px_6px_0_0_rgba(20,20,15,1)] transition-all duration-300 border-slate-200 group"
             >
               <span className="text-3xl group-hover:scale-110 transition-transform">{skillIcons[skill]}</span>
               {skill}
@@ -75,7 +76,7 @@ const Skills = () => {
           {[...resumeData.skills.marqueeRow2, ...resumeData.skills.marqueeRow2].map((skill, index) => (
             <div
               key={index}
-              className="flex items-center gap-3 justify-center px-8 py-4 mx-4 glass-panel whitespace-nowrap text-xl font-space font-medium text-white/80 hover:text-accent-violet hover:-translate-y-2 hover:shadow-[0_0_20px_rgba(139,92,246,0.4)] transition-all duration-300 border-white/5 group"
+              className="flex items-center gap-3 justify-center px-8 py-4 mx-4 glass-panel whitespace-nowrap text-xl font-space font-bold text-slate-700 hover:text-accent-blue hover:-translate-y-2 hover:shadow-[6px_6px_0_0_rgba(20,20,15,1)] transition-all duration-300 border-slate-200 group"
             >
               <span className="text-3xl group-hover:scale-110 transition-transform">{skillIcons[skill]}</span>
               {skill}
@@ -94,9 +95,9 @@ const Skills = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="glass-panel p-8 hover:border-accent-blue/50 transition-colors group"
+              className="glass-panel hover-lift p-8 hover:border-accent-blue/50 transition-colors group"
             >
-              <h3 className="text-xl font-space font-bold mb-6 text-white group-hover:text-accent-blue transition-colors flex items-center gap-3">
+              <h3 className="text-xl font-space font-bold mb-6 text-slate-900 group-hover:text-accent-blue transition-colors flex items-center gap-3">
                 <span className="text-2xl">{categoryIcons[category.title]}</span>
                 {category.title}
               </h3>
@@ -104,7 +105,7 @@ const Skills = () => {
                 {category.items.map((item, idx) => (
                   <span
                     key={idx}
-                    className="px-3 py-1 bg-white/5 border border-white/10 rounded-md text-sm text-white/70"
+                    className="px-3 py-1 bg-slate-900/5 border border-slate-200 rounded-md text-sm text-slate-600"
                   >
                     {item}
                   </span>
